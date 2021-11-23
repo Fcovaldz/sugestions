@@ -1,6 +1,7 @@
 package com.geoname.sugestionss.model;
 
 public class Sugestions {
+
     private final String name;
     private final String latitude;
     private final String longitude;

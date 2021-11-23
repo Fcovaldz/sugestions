@@ -30,8 +30,24 @@ public class SugestionsServiceImpl implements SugestionsService{
     }
 
     @Override
+    public void update(Sugestions sugestions) {
+        sugestionsList.add(sugestions);
+    }
+
+    @Override
+    public Sugestions get(int geonameId) {
+        return sugestionsList.get(geonameId);
+    }
+
+    @Override
     public Sugestions findById(String id) {
         return sugestionsList.get(Integer.parseInt(id));
+    }
+
+    @Override
+    public Sugestions delete(Integer id) {
+        sugestionsList.remove(id);
+        return null;
     }
 
     private void sugestionsGeoname(){
